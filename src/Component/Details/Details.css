@@ -1,0 +1,9 @@
+.details-container{
+    display:flex;
+}
+.player-details{
+    width:70%;
+    margin-left:20px;
+    margin-right: 5px;
+    border-right: 2px solid lightgray;
+}
