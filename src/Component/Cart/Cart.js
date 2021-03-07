@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cart.css'
+import './Cart.css';
 
 const Cart = (props) => {
     const cart = props.cart;
@@ -11,19 +11,22 @@ const Cart = (props) => {
     }
 
     return (
-        <div>
-            <h4>Players Added:{cart.length}</h4>
+        <div className="cart">
+            <h4 className="text-primary">Players Added:{cart.length}</h4>
             <h1>Total Salary:{totalSalary}</h1>
             <br />
-            {}
-            <div className="cart-info">
-                <ul><div>
-                    <li> Name:{
-                        cart.map(player => player.name)
-                    }</li>
-                    <li>Salary:{cart.map(player => player.value)}</li>
-                    <li>Team:{cart.map(player => player.Team)}</li>
-                </div>
+            <div >
+                <ul className="cart-info">
+                    {
+                        cart.map(m => <li>
+                            <img src={m.Image}></img>
+                            <br />
+                            NAME: {m.name},
+                            <br />
+                            Salary: {m.value} ,
+                            <br />
+                            Team: {m.Team}</li>)
+                    }
                 </ul>
             </div>
         </div>

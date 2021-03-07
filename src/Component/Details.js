@@ -9,15 +9,21 @@ const Details = () => {
     const [persons, setPerson] = useState(first10);
 
     const [cart, setCart] = useState([]);
+    const [team,setTeam] = useState([]);
 
     const handleAddPerson = (person) => {
         const newCart = [...cart, person];
         setCart(newCart);
     }
 
+    const addTeam = (name) => {
+        setTeam([...team, name]);
+    }
+
     return (
         <div className="details-container">
             <div className="player-details">
+                <ul></ul>
                 {
                     persons.map(pd => <Person
                         handleAddPerson={handleAddPerson}

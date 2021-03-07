@@ -1,6 +1,8 @@
-.cart-info h4{
-    border: 1px solid blue;
+.cart-info img{
+    height:300px;
+    width:300px;
 }
-.card-info{
-    position: absolute;
+.cart{
+    margin-top: 50px;
+    margin-left: 20px;
 }
